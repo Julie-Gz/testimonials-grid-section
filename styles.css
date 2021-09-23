@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+body{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    border-radius: 50%;
+    border: 3px solid hsla(0, 0%, 100%, 0.5);
+    width: 60px;
+    height: 60px;
+}
+
+h3{
+    font-size: 90%;
+}
+
+main{
+    max-width: 90%;
+    margin: 1.5rem auto;
+}
+
+section{
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.verified{
+    font-weight: 500;
+}
+
+.strong{
+    font-weight: 600;
+    font-size: 120%;
+    margin-bottom: 1.5rem;
+}
+
+.review{
+    font-weight: 500;
+}
+
+.svg-bg{
+    background-color: hsl(263, 55%, 52%);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='104' height='102' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M104 102V59.727H84.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C95.01 25.86 98.909 22.257 104 19.375V0c-9.758 4.27-17.712 9.874-23.864 16.813-6.151 6.939-10.712 14.545-13.681 22.818C63.485 47.904 62 59.941 62 75.74V102h42zm-62 0V59.727H22.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C33.01 25.86 36.909 22.257 42 19.375V0c-9.652 4.27-17.58 9.874-23.784 16.813C12.01 23.752 7.424 31.358 4.455 39.631 1.485 47.904 0 59.941 0 75.74V102h42z' fill='%23A775F1' fill-rule='nonzero'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: top right 20px;
+    background-size: 45%;
+}
+
+.daniel{
+    color: hsl(0, 0%, 100%);
+}
+
+.daniel .verified{
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+.daniel .review{
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+.jonathan{
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+
+.jonathan .verified{
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+.jonathan .review{
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+.jeanette{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 29%, 14%);
+}
+
+.jeanette .verified{
+    color: hsl(219, 29%, 14%, 0.5);
+}
+
+.jeanette .review{
+    color: hsla(219, 29%, 14%, 0.7);
+}
+
+.patrick{
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+
+.patrick .verified{
+    color:hsla(0, 0%, 100%, 0.5);
+}
+
+.patrick .review{
+    color:hsla(0, 0%, 100%, 0.5);
+}
+
+.patrick img{
+    border: 3px solid hsla(263, 55%, 52%, 0.5);
+}
+
+.kira{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 29%, 14%);
+    margin-bottom: 0;
+}
+
+.kira .verified{
+    color: hsl(219, 29%, 14%, 0.5);
+}
+
+.kira .review{
+    color: hsla(219, 29%, 14%, 0.7);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 1rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*Media Query*/
+
+@media screen and (min-width: 1040px) {
+    main{
+        max-width: 90%;
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+        gap: 1rem;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+
+    img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile{
+        gap:1rem;
+    }
+
+    .strong{
+        font-size: 180%;
+    }
+
+    .review{
+        line-height: 1.6;
+        font-size: 120%;
+    }
+
+    .daniel{
+        grid-area: daniel;
+        flex: 1 1 100%;
+
+    }
+
+    .svg-bg{
+        background-size: 25%;
+        background-position: top right 90px;
+    }
+
+    .jonathan{
+        grid-area: jonathan;
+        flex: 1 1 100%;
+
+    }
+
+    .jeanette{
+        grid-area: jeanette;
+        flex: 1 1 100%;
+    }
+    
+    .patrick{
+        grid-area: patrick;
+        flex: 1 1 100%;
+    }
+
+    .kira{
+        grid-area: kira;
+        flex: 1 1 100%;
+        margin-bottom: 2rem;
+    }
+
+    .attribution{
+        grid-column: 1 / 5;
+    }
+}
